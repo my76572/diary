@@ -1,0 +1,13 @@
+vendor  供应商   存放第三方插件
+loader  加载者
+generated 生成
+
+index.php
+自动加载文件
+
+
+
+
+
+
+

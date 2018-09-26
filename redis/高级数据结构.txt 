@@ -1,0 +1,6 @@
+String，Hash，List，Set，Sorted Set，Bitmaps，Hyperloglogs，GEO。
+
+
+bitmaps是String类型上的一组面向bit操作的集合。
+HyperLogLogs是用于计算唯一事物的概率数据结构，这个结构可以非常省内存的去统计各种计数，比如注册ip数、每日访问IP数、页面实时UV（PV肯定字符串就搞定了）、在线用户数等。
+GEO 存储经纬度 

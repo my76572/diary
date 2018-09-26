@@ -1,0 +1,128 @@
+1.count:
+count($array());  //
+count(strlen(“http://php.net”));  //1
+
+2.list,把索引数组中的值赋给变量
+$a = 1;
+$b = 2;
+list($a,$b) = array($b,$a); //$a=2  ,  $b=1
+
+3. php.ini中的safe_mode关闭之后的影响：
+safe_mode 开启之后，主要会对系统操作、文件、权限设置等方法产生影响 ，如fopen require  exec,在5.4及其以上版本已弃用。
+
+4.魔术方法：
+对象：__construct __tostring __clone  __destruct
+属性： __set  __isset  __unset __get
+方法： __call __callStatic
+
+5.垃圾回收机制：
+php中的变量存储在变量容器zval中，zval中除了存储变量类型和值外，还有is_ref和refcount字段。refcount表示指向变量的元素个数，is_ref表示变量是否有别名。如果refcount为0时，就回收该变量容器。如果一个zval的refcount减1之后大于0，它就会进入垃圾缓冲区。当缓冲区达到最大值后，回收算法会循环遍历zval，判断其是否为垃圾，并进行释放处理。
+
+6.oop
+object oriented programming(对象，以...为导向 程序)
+OOP具有三大特点：1. 封装性（又叫做隐藏性）；2. 继承性； 3. 多态性。
+OOP的优点：1、代码重用性高（省代码） 2、使程序的可维护性高（扩展性） 3、灵活性
+
+
+7.修饰符
+public     依赖注入
+protected  继承
+private    类内
+
+8.单点入口：
+整个应用程序只有一个入口，即index.php
+
+利于架构，设置全局变量，常量等
+
+9.单例
+class getInstance{
+    private static $obj;
+    private function __clone(){}
+    private function __construct(){}
+    public static function(){
+        if(!self::$obj instanceof self){
+             self::obj = new self();
+        }
+        return self::obj;
+    } 
+}
+
+10.sql注入及预防：
+案例： 用户登陆时
+      用户名： " or 1=1 #'  密码随便输入
+      select * from users where username='' or 1=1#' and password=md5('')
+      select * from users where username='' or 1=1  //即可直接登陆
+sql注入：通过表单提交等方式将提交信息拼接成一个完整的sql语句，从而获取隐私信息。
+预防：
+   对单引号进行转义，对提交信息进行正则判断等。
+
+   二.xss跨站脚本攻击
+     恶意插入<script>代码，从而导致达到攻击用户的目的
+     危害：恶意提交表单，获取用户cookie
+   
+   三. csrf:跨站请求伪造
+     
+
+
+11. rbac
+
+12  排序：
+一.冒泡排序
+
+
+
+
+
+
+
+
+
+
+1. PHP方面的问题
+什么是composer？以及composer是干什么用的？工作原理
+PHP如何实现静态化
+你了解设计模式吗？说下你最常用的设计模式
+观察者模式是如何实现的？工厂模式是如何实现的？适配器模式是如何实现的？……
+PHP的优化方案
+说下你了解的session和cookie
+如何实现不基于session和cookie的用户认证。
+说下你目前框架所用到的核心概念
+什么是CSRF攻击，XSS攻击？如何防范
+你了解RESTful API吗？说说干什么用的。
+设计的原则
+如果实现自动加载？不用composer如何实现？PSR-4是什么？
+2. 数据库方面
+你知道nosql吗？你用的nosql都有哪些？
+mysql索引优化
+mysql的优化方案
+mysql的事务
+mysql的读写分离
+消息队列如何实现
+查询优化
+msyql的存储引擎，以及各自的区别
+redis和memcache有什么区别
+索引有哪些，你是如何做索引的？
+如何分表
+3. 服务器方面
+说下一些你常用的linux命令
+Linux如何搭建LAMP环境
+你们平常工作的系统环境是在哪里？
+你了解Docker吗？
+你说下常用的服务端口号
+4. 前端知识
+说下都有哪些跨域。
+事件冒泡
+DOM事件流
+JS是如何实现继承的
+5. 算法和其它方面
+最常用的排序算法
+做一个微信抢红包的功能
+如何防止高并发
+你们用哪种版本控制？如何避免代码冲突
+在浏览中输入网址后都发生了什么
+你了解socket吗？
+如果打开网页的时候白屏10秒才显示出页面，如果进行排查。
+
+
+
+

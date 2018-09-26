@@ -1,0 +1,10 @@
+mac安装
+第一步安装pear   第二步安装phpunit
+
+1.pear version
+
+2.下载phpunit.phar  (多种下载方式)   赋予权限chmod
+3.mv 到/usr/local/bin下
+
+
+

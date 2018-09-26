@@ -1,0 +1,93 @@
+1、PHP加密解密 
+2、PHP生成随机字符串 
+3、PHP获取文件扩展名（后缀） 
+4、PHP获取文件大小并格式化 
+5、PHP替换标签字符 
+6、PHP列出目录下的文件名 
+7、PHP获取当前页面URL 
+8、PHP强制下载文件 
+9、PHP截取字符串长度 
+10、PHP获取客户端真实IP 
+11、PHP防止SQL注入 
+12、PHP页面提示与跳转 
+13、PHP计算时长 
+14、PHP写日志 
+15、PHP获取当前月份第一天和最后一天 
+
+
+2、PHP生成随机字符串 
+function generateRandomString($length = 10) { 
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
+    $randomString = ''; 
+    for ($i = 0; $i < $length; $i++) { 
+        $randomString .= $characters[rand(0, strlen($characters) - 1)]; 
+    } 
+    return $randomString; 
+} 
+
+3.PHP获取文件扩展名（后缀） 
+function getExtension($filename){ 
+  $myext = substr($filename, strrpos($filename, '.')); 
+  return str_replace('.','',$myext); 
+} 
+
+4.PHP获取文件大小并格式化 
+function formatSize($size) { 
+    $sizes = array(" Bytes", " KB", " MB", " GB", " TB", " PB", " EB", " ZB", " YB"); 
+    if ($size == 0) {  
+        return('n/a');  
+    } else { 
+      return (round($size/pow(1024, ($i = floor(log($size, 1024)))), 2) . $sizes[$i]);  
+    } 
+} 
+
+5、PHP替换标签字符
+function stringParser($string,$replacer){ 
+    $result = str_replace(array_keys($replacer), array_values($replacer),$string); 
+    return $result; 
+}
+
+6、PHP列出目录下的文件名 
+function listDirFiles($DirPath){ 
+    if($dir = opendir($DirPath)){ 
+         while(($file = readdir($dir))!== false){ 
+                if(!is_dir($DirPath.$file)) 
+                { 
+                    echo "filename: $file<br />"; 
+                } 
+         } 
+    } 
+} 
+
+7、PHP获取当前页面URL
+以下函数可以获取当前页面的URL，不管是http还是https。
+function curPageURL() { 
+    $pageURL = 'http'; 
+    if (!empty($_SERVER['HTTPS'])) {$pageURL .= "s";} 
+    $pageURL .= "://"; 
+    if ($_SERVER["SERVER_PORT"] != "80") { 
+        $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"]; 
+    } else { 
+        $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; 
+    } 
+    return $pageURL; 
+} 
+
+10、PHP获取客户端真实IP
+我们经常要用数据库记录用户的IP，以下代码可以获取客户端真实的IP：
+function getIp() { 
+    if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown")) 
+        $ip = getenv("HTTP_CLIENT_IP"); 
+    else 
+        if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown")) 
+            $ip = getenv("HTTP_X_FORWARDED_FOR"); 
+        else 
+            if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown")) 
+                $ip = getenv("REMOTE_ADDR"); 
+            else 
+                if (isset ($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown")) 
+                    $ip = $_SERVER['REMOTE_ADDR']; 
+                else 
+                    $ip = "unknown"; 
+    return ($ip); 
+} 

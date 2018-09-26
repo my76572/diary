@@ -1,0 +1,259 @@
+[04-Sep-2018 13:16:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Tcp' not found in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:59
+Stack trace:
+#0 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 59
+[04-Sep-2018 14:26:24 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:26:24 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:24 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:24 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:24 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:24 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:24 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:26:24 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:26:24 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:24 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:24 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:24 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:24 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:28 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:26:28 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:28 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:28 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:28 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:28 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:28 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:26:28 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:26:28 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:28 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:28 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:28 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:28 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:30 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:26:30 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:30 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:30 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:30 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:30 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:30 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:26:30 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:26:30 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:30 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:30 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:30 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:30 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:34 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:26:34 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:34 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:34 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:34 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:34 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:34 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:26:34 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:26:34 UTC] PHP Stack trace:
+[04-Sep-2018 14:26:34 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:26:34 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:26:34 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:26:34 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:34:46 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:34:46 UTC] PHP Stack trace:
+[04-Sep-2018 14:34:46 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:34:46 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:34:46 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:34:46 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:34:46 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:34:46 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:34:46 UTC] PHP Stack trace:
+[04-Sep-2018 14:34:46 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:34:46 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:34:46 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:34:46 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:09 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:35:09 UTC] PHP Stack trace:
+[04-Sep-2018 14:35:09 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:09 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:35:09 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:35:09 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:09 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:35:09 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:35:09 UTC] PHP Stack trace:
+[04-Sep-2018 14:35:09 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:09 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:35:09 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:35:09 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:21 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:35:21 UTC] PHP Stack trace:
+[04-Sep-2018 14:35:21 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:21 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:35:21 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:35:21 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:21 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:35:21 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:35:21 UTC] PHP Stack trace:
+[04-Sep-2018 14:35:21 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:35:21 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:35:21 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:35:21 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:37:09 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:09 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:09 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:09 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:37:09 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:37:09 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:09 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:09 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:09 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 48
+[04-Sep-2018 14:37:09 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:09 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:09 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:09 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:09 UTC] PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:48
+[04-Sep-2018 14:37:13 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:37:13 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:13 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:13 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:13 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:37:13 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:37:13 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:13 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:13 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:13 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 48
+[04-Sep-2018 14:37:13 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:13 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:13 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:13 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:13 UTC] PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:48
+[04-Sep-2018 14:37:15 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:37:15 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:15 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:15 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:15 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:37:15 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:37:15 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:15 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:15 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:15 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 48
+[04-Sep-2018 14:37:15 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:15 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:15 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:15 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:15 UTC] PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:48
+[04-Sep-2018 14:37:16 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:37:16 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:16 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:16 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:16 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:37:16 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:37:16 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:16 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:16 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:16 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 48
+[04-Sep-2018 14:37:16 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:16 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:16 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:16 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:16 UTC] PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:48
+[04-Sep-2018 14:37:35 UTC] PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 46
+[04-Sep-2018 14:37:35 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:35 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:35 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:35 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+[04-Sep-2018 14:37:35 UTC] PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 47
+[04-Sep-2018 14:37:35 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:35 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:35 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:35 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 48
+[04-Sep-2018 14:37:35 UTC] PHP Stack trace:
+[04-Sep-2018 14:37:35 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:63
+[04-Sep-2018 14:37:35 UTC] PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:20
+[04-Sep-2018 14:37:35 UTC] PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:37:35 UTC] PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:48
+[04-Sep-2018 14:54:12 UTC] PHP Notice:  Undefined property: Tcp::$serv in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 19
+[04-Sep-2018 14:54:12 UTC] PHP Stack trace:
+[04-Sep-2018 14:54:12 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:54:12 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+[04-Sep-2018 14:54:12 UTC] PHP Notice:  Undefined property: Tcp::$serv in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 38
+[04-Sep-2018 14:54:12 UTC] PHP Stack trace:
+[04-Sep-2018 14:54:12 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:54:12 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+[04-Sep-2018 14:54:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function addProcess() on null in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:38
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#1 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 38
+[04-Sep-2018 14:55:01 UTC] PHP Notice:  Undefined property: Tcp::$serv in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 38
+[04-Sep-2018 14:55:01 UTC] PHP Stack trace:
+[04-Sep-2018 14:55:01 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+[04-Sep-2018 14:55:01 UTC] PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+[04-Sep-2018 14:55:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function addProcess() on null in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:38
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#1 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 38
+[04-Sep-2018 14:57:24 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:8
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(8): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 8
+[04-Sep-2018 15:04:38 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:8
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(8): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 8
+[04-Sep-2018 15:04:59 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:8
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(8): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 8
+[04-Sep-2018 15:05:24 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:8
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(8): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 8
+[04-Sep-2018 15:08:42 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:8
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(8): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(89): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 8
+[06-Sep-2018 15:02:52 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[127.0.0.1:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:10
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(10): Swoole\Server->__construct('127.0.0.1', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(94): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 10
+[06-Sep-2018 15:04:50 UTC] PHP Fatal error:  Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[48]. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:10
+Stack trace:
+#0 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(10): Swoole\Server->__construct('0.0.0.0', '9501', 4, 1)
+#1 /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php(94): Tcp->__construct()
+#2 {main}
+  thrown in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 10

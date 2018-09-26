@@ -1,0 +1,2 @@
+mysql的配置文件为 my.cnf
+datadir =   //为储存数据的目录

@@ -1,0 +1,62 @@
+1.用户表
+CREATE TABLE IF NOT EXISTS xe_user
+(
+id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+email VARCHAR(32) NOT NULL COMMENT "邮箱",
+username VARCHAR(20) NOT NULL COMMENT "用户名",
+password CHAR(32) NOT NULL COMMENT "密码",
+phone CHAR(11) NOT NULL COMMENT "手机号",
+UNIQUE uniq_email (email),
+UNIQUE uniq_username (username)
+)ENGINE=innodb DEFAULT CHARSET=utf8 COMMENT="用户表";
+
+
+用户收货地址
+CREATE TABLE IF NOT EXISTS xe_user_address
+(
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+user_id INT UNSIGNED NOT NULL COMMENT "外键-用户id",
+consignee VARCHAR(20) NOT NULL COMMENT "收货人",
+province VARCHAR(20) NOT NULL COMMENT "省",
+city VARCHAR(20) NOT NULL COMMENT "市",
+county VARCHAR(20) NOT NULL COMMENT "县",
+street VARCHAR(120) NOT NULL COMMENT "街道地址",
+tel CHAR(12) NOT NULL COMMENT "电话",
+postcode CHAR(10) NOT NULL COMMENT "邮编地址",
+INDEX idx_user_id (user_id)
+)ENGINE=innodb DEFAULT CHARSET=utf8 COMMENT="用户收货地址，可以有多个";
+
+第三方平台与用户绑定表
+
+CREATE TABLE IF NOT EXISTS xe_open_bind
+(
+user_id INT UNSIGNED NOT NULL COMMENT "外键-用户ID",
+openid CHAR(64) NOT NULL COMMENT "开放平台的id",
+open_distinguish TINYINT NOT NULL COMMENT "开放平台区别",
+open_name VARCHAR(20) NOT NULL COMMENT "开放平台名称",
+INDEX idx_user_id (user_id)
+)ENGINE=innodb DEFAULT CHARSET=utf8 COMMENT="第三方平台与用户绑定表";
+
+用户信息表
+CREATE TABLE IF NOT EXISTS xe_userinfo
+(
+user_id INT UNSIGNED NOT NULL COMMENT "外键-用户id",
+balance DECIMAL(7,1) NOT NULL COMMENT "余额",
+integral SMALLINT NOT NULL COMMENT "积分",
+INDEX idx_user_id (user_id)
+)ENGINE=innodb DEFAULT CHARSET=utf8 COMMENT="用户信息表，保存用户余额，积分等数据";
+
+=================================
+
+两张表：
+1.从第三方平台获取的用户信息  表A
+id  openid  image  name  sex  provide  
+2.用户信息表
+id uid(A.id)  phone  provice  city  address  is_type(多个地址)
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+启动reids的服务器与客户端
+  6379
+  find / -name redis-server   ./redis-server
+  find / -name redis-cli      ./redis-cli
+  ps -ef | grep redis          lsof -i:6379  //查看6379端口运行的进程，并kill  
+
+redis返回数量的，若不存在则返回0;   若返回的是具体值，值不存在返回nil
+1.key
+exists keyname   返回数量
+expire keyname 60 设置过期时间   成功返回1 不成功0
+del keyname     返回删除数量
+keys pattern(模式)   匹配模式  返回key
+randomkey   随即返回一个key，不删除key,若数据库为空，则返回nil
+序列化： dump keyname   //返回序列化后的值
+key迁移 migrate
+
+key:功能
+过期时间，剩余时间，移除过期时间  类型
+ expire  ttl     persist     type
+增    删   改      查  存 
+set  del rename  get  exists 
+
+============
+场景1.验证码
+set  15832630246  782394 //存储手机验证码
+expire 15832630246  60   //设置验证码过期时间为60秒
+场景2.用户上线频率
+setbit  username  100 1   //用户在第100天登陆
+setbit  username  102 1   //用户在102天登陆
+bitcount username   //用户登录总天数
+场景3.计数器
+set sum 0
+incr sum 
+decr sum
+场景4.限制器
+一分钟提交1次，五分钟提交三次
+setex username 60 submit_value   //username已提交，且时间为60
+ttl username  > 0   //剩余时间>0不能提交
+
+setex username_count 300 0   //username提交的5分钟开始计时
+incr username_count 
+ttl username_count > 0 && get username_count < 3 //5分钟内且计数<3
+
+
+string:
+增    删   改                  查       截取    覆盖        长度       
+set  del  set/rename/getset  get    getrange  setrange   strlen
+mset                         mget
+setex
+setbit                       getbit    bitcount 
+incr/decr  incrby/decrby    append追加
+============  
+hash：类似于数据表
+场景1.商品维度：
+  一个商品的关注,评论，销量
+场景2。用户维度：
+动态数、关注数、粉丝数、喜欢商品数、发帖数
+存增删改查： hexists  hset/hmset  hget/hmget  hgetall
+字段名 hkeys hlen(字段数量)  字段数量 hvals
+自增    hincrby
+
+==============
+lists  消息队列
+
+
+
+===============
+sort  
+集合：交集，差集，并集  可用于商品推荐，人际关系等
+
+================
+bitmaps:
+
+HyperLogLogs:用于海量的数据关系  访问量
+
+
+GEO: 经纬度
+
+
+==================
+事务： acid 原子性 一致性 隔离性  持久性   
+
+
+

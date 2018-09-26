@@ -1,0 +1,16 @@
+1.安装composer.         brew install composer
+
+测试：composer -v。   全局安装
+
+2.composer 安装laravel  
+
+sudo composer create-project  --prefer-dist  laravel/laravel=5.4.*  new.  //dist分发。 new项目名称
+
+执行完会提示：不要使用root账户创建，会有安全问题。
+
+3.设置目录权限：对于storage文件夹和bootstrap/cache必须设置为服务器可以写入的权限
+
+   修改config/app.php配置文件，这里面可以修改时区和语言等。 北京时间PRC
+
+  ===================================================+++=====================================
+二。错误日志    

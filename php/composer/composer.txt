@@ -1,0 +1,18 @@
+1.安装PHP常用的类库：比如predis   openssl   whoops(调试错误)
+2.创建项目
+
+
+常用指令：
+composer create-project 
+
+
+在composer.json中填写依赖，
+composer install 
+
+composer search predis
+
+composer install preids  从lock中读取 如果有
+composer update   predis  从json中读取
+composer  require  predis/predis=^1.1      直接命令行获取 不依赖于 composer.json
+
+composer remove predis  移除

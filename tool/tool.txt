@@ -1,0 +1,13 @@
+1.消息队列 rabbitmq redis
+2.git composer debug
+3.xhprof性能分析工具
+4.charles fiddler抓包工具
+
+wiki   接口文档工具
+rap    前后台分离工具
+
+
+- 精通Linux系统、MySQL性能调优及HTTP协议，WebSocket协议；xshell脚本
+- 精通PHP面向对象编程方法、习惯于写单元测试；
+- 精通Laravel框架的使用；熟悉微信公众号、小程序开发；
+- 熟悉NoSQL，Redis, MangoDB，Memcached；

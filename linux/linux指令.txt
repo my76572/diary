@@ -1,0 +1,10 @@
+1. 644  可读4  可写2   可执行1      文件所有者  文件所有者的同用户组  其他用户组   chmod  755 file  li -l 查看权限
+chmod 权限
+
+chown users:jessie file1.txt  将文件 file1.txt 的拥有者设为 users 群体的使用者 jessie :
+
+ps   process（进程）  
+
+grep  匹配内容
+
+top

@@ -1,0 +1,96 @@
+魔术方法：
+对象： 初始化   输出字符串 克隆   销毁  
+属性： 判断是否存在  设置(权限不够)   销毁
+方法： 设置(不存在或者权限不够)  __callStatic() 
+__construct   __tostring() __clone()和clone一组   __destruct：析构方法  销毁对象时调用 unset($obj) $obj=NULL
+__isset($var)    __set($属性, $value)  __unset($属性)  __get()
+__call()  __callStatic() 
+
+this 指向当前对象的指针
+self 指向当前类的指针
+parent 指向父类的指
+instanceof 对象和类是不是实例化关系
+
+1.interface  implements
+接口类的特征：interface class{}
+1.接口是一个模版，所有方法没有函数体，权限都是public
+2.属性必须是常量 const，即没有属性，只有常量
+3.子类可以继承多个接口，且子类必须实现接口的所有方法
+
+抽象类：abstract class ClassName
+1.抽象类含有普通方法和抽象方法，抽象方法必须重写。 普通方法则是子类的重写部分。修饰符为protected
+2.单继承
+
+interface和abstract的区别
+1.作用：interface作用是一个模版，规范开发；  abstract的作用和公共类比较像，会把类的重写的功能提取到抽象类中。但是抽象类不用重写。
+2.语法不同： interface没有关键字class 继承用implements ,可多继承。  abstract是单继承，用extends
+           interface 成员属性是常量const.  成员方法是public,所有的方法必须实现
+           abstract 有普通方法和抽象方法，抽象方法必须实现  修饰符是protected
+           
+final类不能继承     final方法不能重写
+
+abstract class Demo
+{
+
+    var $test;
+
+    abstract function fun1();
+    abstract function fun2();
+
+    function fun3(){
+        ...
+    }
+}
+
+traits
+trait A{
+    public function smallTalk(){}
+    public function bligTalk(){}
+}
+
+trait B{
+    public function smallTalk(){}
+    public function bligTalk(){}
+}
+
+class ClassName{
+    use A,B{
+        B::smallTalk insteadof B;
+        A::bligTalk  insteadof A;
+
+    }
+}
+
+
+4.  instanceof
+ 作用一.判断变量是不是属于类的实例化对象。
+ 作用二. 判断变量是不是父类的子类的实例化对象。
+ <?php
+class MyClass
+{
+}
+
+class NotMyClass
+{
+}
+$a = new MyClass;
+
+var_dump($a instanceof MyClass);     //true
+var_dump($a instanceof NotMyClass);  //true 
+?>
+
+<?php
+class ParentClass
+{
+}
+
+class MyClass extends ParentClass
+{
+}
+
+$a = new MyClass;
+
+var_dump($a instanceof MyClass);      //true
+var_dump($a instanceof ParentClass);  //true
+?>
+

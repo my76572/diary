@@ -1,0 +1,36 @@
+1.app接口安全方式 
+  1.token 制作方法：（token可以解决：调用接口的客户端是否合法）
+  function makeToken($data){
+    //$data就是$_POST传过来的参数
+    unset($data['token']); 
+    unset($data['auth_key']); //这个下面会说到
+    ksort($data);    
+    $string = http_build_query($data);    
+    if(empty($data)){        
+        $string = 'key=CT01aVVsCkSxYdxi55ml';
+    } else {        
+        $string = $string .'&key=CT01aVVsCkSxYdxi55ml';
+    }    
+    $string = md5($string);    
+    $result = strtoupper($string);    
+    return $result;
+  }
+
+  auth_key：记录用户的登陆状态，可以包含登陆日期，如7天报纸期
+  /*以下是thinkphp3.2的验证方法*/
+  <?phpnamespace Api\Controller;use Think\Controller;/**
+    * 公共控制器
+    */
+    class CommonController extends Controller {
+    
+        public function _initialize(){
+            // // //验证token
+            $token = I('token');        
+            $sal = makeToken($_POST);        
+            if($sal!=$token){            
+                $result = ajaxR(404,'认证失败');            
+                $this->ajaxReturn($result);
+            }
+    
+        }
+    }

@@ -1,0 +1,27 @@
+ 
+ int   strpos  stripos
+ int   strrpos  strripos
+
+ substr  
+ 
+ strstr    stristr    echo stristr("Hello world!","WORLD");  //world!
+
+str_replace
+
+
+转变大小写有四种： strtolower   strtoupper  ucfirst  ucwords
+ascll转化字符两种  chr  ord
+去除空格三种：    trim  ltrim  rtrim  
+切割成数组三种   explode(按字符切割)  str_split(按长度切割)  split(按正则切割)
+切割：chunk_split
+长度两个： strlen    substr_count
+反转：  strrev 
+
+截取： substr  strstr(首次)  strrchr(最后一次)   stristr(大小写不明感)
+位置： strpos()  strrpos     stripos  strripos   rr末尾数，i大小不敏感
+===================
+
+
+array implode  我是组，切割组
+
+explode  string

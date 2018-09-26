@@ -1,0 +1,13 @@
+lsof -i tcp:80   查看某端口
+kill  pid   停止进程
+
+==============tcp=============
+$serv = new swoole_server("127.0.0.1", 9501);   //实例化对象，声明端口
+
+cli运行PHP文件  php  filename.php
+连接tcp连接     telnet 127.0.0.1 端口号
+
+
+
+
+

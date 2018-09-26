@@ -1,0 +1,53 @@
+git init .   //设置一个仓库
+
+git  add filename
+git commit  -m "注释"
+
+git log 查看日志 。 q结束日志
+git log index.php 查看特定文件的日志
+git reflog index.php .  查看所有的日志
+
+git reset --hard   head的号码 .   
+
+cat filename .   查看文件内容
+
+工作区：
+就是项目的存放目录就是工作区
+
+
+.git这个不是工作区 。  而是版本库
+版本库有暂存区和分支
+暂存区： git .  add 提交代码到暂存区
+分支：  有分枝及head组成
+
+
+git status .   查看状态
+
+git checkout   -- filename .  撤销工作区的修改 .  或者删了文件，从版本库恢复到工作区
+git reset  HEAD  filename .   撤销暂存区
+git .  reset  --hard head号码 。 撤销分支
+
+
+git rm  filename .   删除文件
+git commit    重新备注到版本库
+
+git add 和 git rm 都是对暂存区的操作 
+
+ git checkout -- filename   //把删除的文件从版本库恢复
+
+
+git remote add origin git@github.com:michaelliao/仓库.git   和远程仓库发生关联
+git  push origin master   //提交到远程仓库
+git  push  -u origin master  //第一次提交
+
+
+分支：
+
+git branch dev 创建dev分支
+git checkout dev  切换分支
+git  checkout -b dev   创建并切换分支
+
+git branch 查看分支 
+
+git merge 分支名  合并分支 线切换到master再merge分支
+

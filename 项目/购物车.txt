@@ -1,0 +1,23 @@
+购物车：
+    用户id   商品id  商品的一些属性：如促销编码，待发货等
+id 
+uid 
+goods_id 商品ID
+session_id 购物车ID
+goods_sn 商品编码
+goods_name 商品名称
+shop_price 商品商城售价
+goods_price 商品真实售价(与shop_price的区别在于,当打折的时候,shop_price是打折之前商品的售价,而goods_price是打折之后的)
+goods_number 数量
+weight 商品重量
+goods_attr 商品属性(如颜色,尺码)
+promote_code 促销编码(为商品促销,做的策略模式识别码)
+is_promote 促销ID
+stock_id 库存ID
+is_pay   是否支付
+
+
+
+流程：
+如果是公众号，小程序，熊掌号的话，则可以获取openid
+

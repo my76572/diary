@@ -1,0 +1,50 @@
+1.mysql的性能优化包罗甚广： 索引优化，查询优化，查询缓存，服务器设置优化，操作系统和硬件优化，应用层面优化（web服务器，缓存）
+  
+查询开销：
+执行时间  检查行数  返回行数
+
+  优化步骤：
+     1.结果是否不常常变化，是否有使用redis的必要
+     2.sql优化：
+      show create table  table_name  \G;
+      分析表结构，是否需要针对某些字段设置索引；
+
+      select count(*)  from table_name ;
+      查询总行数
+
+      explain  select查询语句  分析性能   
+
+  查询语句常用关键字：
+  聚合函数  having  where(and or ~~~ in 、 not in  ～～～ like ～～～  between and  ～～～  !=   >  < )   
+  group by   order by  联表    distinct  limit   union     
+     
+  聚合函数 count用来统计总行数或者某个字段的总个数统计   值为NUL的行不计数
+
+where :
+ like  字符% 使用索引  %字符  不使用索引
+
+关于group by的优化
+select后的字段，必须出现在group by后面，聚合函数的除外
+
+
+关于order by的优化  order by后年的字段也可以使用索引，避免出现using filesort(一种较慢的外部排序)
+ order by 字段 asc|desc ,字段1 asc|desc 
+ 
+
+
+
+CREATE TABLE `user_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `user_id` varchar(50) NOT NULL DEFAULT '' COMMENT '用户编号',
+  `grade` varchar(50) NOT NULL DEFAULT '' COMMENT '年级',
+  `class` varchar(50) NOT NULL DEFAULT '' COMMENT '班级',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_user_id` (`user_id`),
+  KEY `user_id` (`user_id`),
+  KEY `usersid` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
+
+
+select name,city,sex from user inner join user_detail on user.id=user_detail.uid where sex=1;
+
+

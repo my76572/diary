@@ -1,0 +1,103 @@
+rbac
+用户表        用户组表        全限表
+   用户-用户组表    用户组-权限表
+
+
+三张表
+CREATE TABLE user ( 
+    id int(11) NOT NULL AUTO_INCREMENT, 
+    name varchar(32) NOT NULL COMMENT ‘用户姓名’, 
+    email varchar(100) NOT NULL COMMENT ‘用户邮件地址’, 
+    password varchar(64) NOT NULL COMMENT ‘用户密码’, 
+    role_id int(11) NOT NULL COMMENT ‘用户角色’, 
+    status tinyint(5) NOT NULL COMMENT ‘是否启用’, 
+    sex tinyint(5) NOT NULL DEFAULT ‘0’ COMMENT ‘0：保密 1：男 2：女’, 
+    head varchar(150) DEFAULT NULL, 
+    birthday date DEFAULT ‘1000-01-01’ COMMENT ‘生日’, 
+    tel varchar(20) DEFAULT ”COMMENT ‘电话号码’, 
+    create_time int(11) NOT NULL COMMENT ‘创建时间’, 
+    update_time int(11) NOT NULL COMMENT ‘更新时间’, 
+    PRIMARY KEY (id), 
+    UNIQUE KEY email (email) USING BTREE, 
+    KEY user_role_id(role_id), 
+    CONSTRAINT user_role_id FOREIGN KEY (role_id) REFERENCES role (id) ON DELETE CASCADE 
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COMMENT=’后台用户表’   
+
+
+CREATE TABLE `role` (
+  `role_id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(20) NOT NULL COMMENT '角色/用户组名称',
+  `role_rule_ids` varchar(128) NOT NULL DEFAULT '' COMMENT '权限ids,1,2,5，权限表中的主键集合',
+  `role_rule_ac` text COMMENT 'Goods-showlist,Goods-add,控制器-操作,控制器-操作,控制器-操作',
+  `create_time` int(11) NOT NULL COMMENT '创建时间',  
+  `update_time` int(11) NOT NULL COMMENT '更新时间',  
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB 
+
+CREATE TABLE rule ( 
+    id int(11) NOT NULL AUTO_INCREMENT, 
+    parent_id int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘父菜单’, 
+    name varchar(100) NOT NULL COMMENT ‘url地址 c+a’, (控制器/方法) 
+    title varchar(100) NOT NULL COMMENT ‘菜单名称’, 
+    icon varchar(100) DEFAULT NULL COMMENT ‘图标’, 
+    islink tinyint(5) NOT NULL DEFAULT ‘0’ COMMENT ‘是否菜单’, 
+    sortint(3) NOT NULL DEFAULT ‘255’ COMMENT ‘排序’, 
+    PRIMARY KEY (id), 
+    UNIQUE KEY rulename (name) 
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4 COMMENT=’权限&菜单表
+
+================五张表
+
+3张实体表分别是用户表，角色表，权限表
+
+CREATE TABLE user ( 
+id int(11) unsigned NOT NULL AUTO_INCREMENT, 
+name varchar(20) NOT NULL DEFAULT ” COMMENT ‘姓名’, 
+email varchar(30) NOT NULL DEFAULT ” COMMENT ‘邮箱’, 
+is_admin tinyint(1) NOT NULL DEFAULT ‘0’ COMMENT ‘是否是超级管理员 1表示是 0 表示不是’, 
+status tinyint(1) NOT NULL DEFAULT ‘1’ COMMENT ‘状态 1：有效 0：无效’, 
+updated_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘最后一次更新时间’, 
+created_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘插入时间’, 
+PRIMARY KEY (id), 
+KEY idx_email (email) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’用户表’;
+
+CREATE TABLE role ( 
+id int(11) unsigned NOT NULL AUTO_INCREMENT, 
+name varchar(50) NOT NULL DEFAULT ” COMMENT ‘角色名称’, 
+status tinyint(1) NOT NULL DEFAULT ‘1’ COMMENT ‘状态 1：有效 0：无效’, 
+updated_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘最后一次更新时间’, 
+created_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘插入时间’, 
+PRIMARY KEY (id) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’角色表’;
+
+CREATE TABLE access ( 
+id int(11) unsigned NOT NULL AUTO_INCREMENT, 
+title varchar(50) NOT NULL DEFAULT ” COMMENT ‘权限名称’, 
+urls varchar(1000) NOT NULL DEFAULT ” COMMENT ‘json 数组’, 
+status tinyint(1) NOT NULL DEFAULT ‘1’ COMMENT ‘状态 1：有效 0：无效’, 
+updated_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘最后一次更新时间’, 
+created_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘插入时间’, 
+PRIMARY KEY (id) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’权限详情表’;
+
+两张关系表分别是用户角色关系表，角色权限关系表。
+
+CREATE TABLE user_role ( 
+id int(11) unsigned NOT NULL AUTO_INCREMENT, 
+uid int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘用户id’, 
+role_id int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘角色ID’, 
+created_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘插入时间’, 
+PRIMARY KEY (id), 
+KEY idx_uid (uid) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’用户角色表’;
+
+CREATE TABLE role_access ( 
+id int(11) unsigned NOT NULL AUTO_INCREMENT, 
+role_id int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘角色id’, 
+access_id int(11) NOT NULL DEFAULT ‘0’ COMMENT ‘权限id’, 
+created_time timestamp NOT NULL DEFAULT ‘0000-00-00 00:00:00’ COMMENT ‘插入时间’, 
+PRIMARY KEY (id), 
+KEY idx_role_id (role_id) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’角色权限表’;
+

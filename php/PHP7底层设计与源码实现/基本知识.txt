@@ -1,0 +1,32 @@
+
+3.1.2 结构体和联合体
+3.1.3 堆 栈
+3.2.1 变量的类型和实现 zval(zend value)
+
+关于c的补充：
+typedef: 在c中可用于声明一个结构体
+struct : 结构体
+
+typedef struct _zval_struct {
+    zvalue_value value;         //value值
+    zend_uint refcount__gc;    //计数器，PHP垃圾回收机制
+    zend_uchar type;
+    zend_uchar is_ref__gc;
+} zval;
+
+typedef union _zvalue_value {
+    long lval;                 // 用于 bool 类型、整型和资源类型
+    double dval;               // 用于浮点类型
+    struct {                   // 用于字符串
+        char *val;
+        int len;
+    } str;
+    HashTable *ht;             // 用于数组
+    zend_object_value obj;     // 用于对象
+    zend_ast *ast;             // 用于常量表达式(PHP5.6 才有)
+} zvalue_value;
+
+
+
+
+

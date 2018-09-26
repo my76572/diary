@@ -1,0 +1,16 @@
+魔术常量：
+__FILE__  :"/Library/WebServer/Documents/swoole/swoole/app/Http/Controllers/TestController.php"
+__DIR__  :"/Library/WebServer/Documents/swoole/swoole/app/Http/Controllers"
+__NAMESPACE__ ： "App\Http\Controllers"
+__METHOD__ ："App\Http\Controllers\TestController::index"
+__CLASS__ : "App\Http\Controllers\TestController"
+__FUNCTION__ : "index"
+__LINE__: 13
+
+
+魔术常量： 
+路径2:  目录  文件
+行数1:  行数
+类3：    命名空间  类名  方法名(函数名)  
+
+魔术常量：行1 路2 类共3，命名类名和方法

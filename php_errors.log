@@ -1,0 +1,33 @@
+[03-Sep-2018 16:10:26 UTC] PHP Notice:  Undefined variable: num in /Library/WebServer/Documents/new/index.php on line 5
+[03-Sep-2018 16:10:26 UTC] PHP Stack trace:
+[03-Sep-2018 16:10:26 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/index.php:0
+[03-Sep-2018 16:10:26 UTC] PHP   2. closureFunc2() /Library/WebServer/Documents/new/index.php:9
+[03-Sep-2018 16:10:26 UTC] PHP   3. {closure:/Library/WebServer/Documents/new/index.php:4-6}() /Library/WebServer/Documents/new/index.php:7
+[03-Sep-2018 16:10:45 UTC] PHP Notice:  Undefined variable: num in /Library/WebServer/Documents/new/index.php on line 5
+[03-Sep-2018 16:10:45 UTC] PHP Stack trace:
+[03-Sep-2018 16:10:45 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/index.php:0
+[03-Sep-2018 16:10:45 UTC] PHP   2. closureFunc2() /Library/WebServer/Documents/new/index.php:9
+[03-Sep-2018 16:10:45 UTC] PHP   3. {closure:/Library/WebServer/Documents/new/index.php:4-6}() /Library/WebServer/Documents/new/index.php:7
+[03-Sep-2018 16:31:58 UTC] PHP Notice:  Undefined variable: a in /Library/WebServer/Documents/new/index.php on line 5
+[03-Sep-2018 16:31:58 UTC] PHP Stack trace:
+[03-Sep-2018 16:31:58 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/index.php:0
+[03-Sep-2018 16:31:58 UTC] PHP   2. {closure:/Library/WebServer/Documents/new/index.php:3-6}() /Library/WebServer/Documents/new/index.php:7
+[03-Sep-2018 17:09:09 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /Library/WebServer/Documents/new/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /Library/WebServer/Documents/new/index.php on line 20
+[03-Sep-2018 17:09:58 UTC] PHP Notice:  Undefined variable: sex in /Library/WebServer/Documents/new/index.php on line 17
+[03-Sep-2018 17:09:58 UTC] PHP Stack trace:
+[03-Sep-2018 17:09:58 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/index.php:0
+[03-Sep-2018 17:09:58 UTC] PHP   2. closureFunc3() /Library/WebServer/Documents/new/index.php:19
+[03-Sep-2018 17:09:58 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /Library/WebServer/Documents/new/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /Library/WebServer/Documents/new/index.php on line 20
+[03-Sep-2018 17:12:18 UTC] PHP Fatal error:  Uncaught Error: Function name must be a string in /Library/WebServer/Documents/new/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /Library/WebServer/Documents/new/index.php on line 20
+[03-Sep-2018 17:19:22 UTC] PHP Notice:  Use of undefined constant test - assumed 'test' in /Library/WebServer/Documents/new/index.php on line 30
+[03-Sep-2018 17:19:22 UTC] PHP Stack trace:
+[03-Sep-2018 17:19:22 UTC] PHP   1. {main}() /Library/WebServer/Documents/new/index.php:0

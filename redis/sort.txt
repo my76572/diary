@@ -1,0 +1,33 @@
+集合的常用命令有：
+添加
+个数
+两个集合的差集，交集，合集
+判断某个元素是否是集合的成员
+移除成员
+返回集合的所有成员
+
+
+使用场景：
+共同关注、共同喜好、二度好友
+
+sadd tag:ruby 1
+sadd tag:ruby 2
+sadd tag:web 2
+sadd tag:erlang 3
+
+//即属于ruby又属于web的书？
+ inter_list = redis.sinter("tag:web", "tag:ruby")
+//即属于ruby，但不属于web的书？
+ diff_list = redis.sdiff("tag:ruby", "tag:web")
+//属于ruby和属于web的书的合集？
+ union_list = redis.sunion("tag:ruby", "tag:web")
+
+ =================
+ sort set 
+ 不允许有重复成员 且每个成员有权重，权重可以一样
+
+ 应用场景：排行榜
+
+
+ 
+

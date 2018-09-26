@@ -1,0 +1,158 @@
+[2018-09-04 22:26:22 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:26:24 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:26:28 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:26:30 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:26:34 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:27:02 *1599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:34:44 *1650.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:34:46 *1650.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:35:09 *1650.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:35:21 *1650.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:36:49 *1650.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:07 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:09 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:13 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:15 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:16 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:35 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-04 22:37:52 *1706.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+进程2
+进程1
+[2018-09-04 22:56:41 *1976.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:1连接成功,来自于线程3
+[2018-09-04 22:56:44 *1976.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：fds
+PHP Warning:  Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 72
+PHP Stack trace:
+PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+PHP   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:72
+
+Warning: Swoole\Server::addlistener(): server is running. can't add listener. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 72
+
+Call Stack:
+    0.0025     368000   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+    0.0025     368056   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+    0.0030     377280   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+    9.0787     639632   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+    9.0788     639728   5. Swoole\Server->addlistener() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:72
+
+PHP Notice:  Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 73
+PHP Stack trace:
+PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+
+Notice: Trying to get property of non-object in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 73
+
+Call Stack:
+    0.0025     368000   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+    0.0025     368056   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+    0.0030     377280   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+    9.0787     639632   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+
+PHP Warning:  Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 74
+PHP Stack trace:
+PHP   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+PHP   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+PHP   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+PHP   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+PHP   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:74
+
+Warning: Swoole\Server::send(): data is empty. in /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php on line 74
+
+Call Stack:
+    0.0025     368000   1. {main}() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+    0.0025     368056   2. Tcp->__construct() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:89
+    0.0030     377280   3. Swoole\Server->start() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:46
+    9.0787     639632   4. Tcp->onReceive() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:0
+    9.0802     639728   5. Swoole\Server->send() /Library/WebServer/Documents/new/php/swoole/server/tcp_server.php:74
+
+[2018-09-04 22:57:20 *1976.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id: 1 关闭了连接
+[2018-09-04 22:58:20 #1970.0]	NOTICE	Server is shutdown now.
+进程1
+进程2
+[2018-09-04 22:58:30 *2033.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:1连接成功,来自于线程2
+[2018-09-04 22:58:32 *2033.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：ds
+[2018-09-04 23:04:06 *2033.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id: 1 关闭了连接
+[2018-09-04 23:05:42 #2028.0]	NOTICE	Server is shutdown now.
+进程1
+进程2
+[2018-09-04 23:06:11 *2091.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:1连接成功,来自于线程3
+[2018-09-04 23:06:11 *2091.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：我是发送的数据
+[2018-09-04 23:06:24 *2091.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:2连接成功,来自于线程3
+[2018-09-04 23:08:57 #2085.0]	NOTICE	Server is shutdown now.
+进程1
+进程2
+[2018-09-04 23:09:42 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:1连接成功,来自于线程3
+[2018-09-04 23:09:52 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：��������[2018-09-04 23:09:52 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：����[2018-09-04 23:09:52 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：
+[2018-09-04 23:10:16 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：��������[2018-09-04 23:10:16 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：����[2018-09-04 23:10:17 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：
+[2018-09-04 23:10:20 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：wangyuedong 
+[2018-09-04 23:10:24 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：��������[2018-09-04 23:10:24 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：����[2018-09-04 23:10:25 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：
+[2018-09-04 23:10:28 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：fsdav
+[2018-09-04 23:10:33 *2150.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:2连接成功,来自于线程2
+[2018-09-04 23:10:33 *2150.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 2 发送的数据：我是发送的数据
+[2018-09-04 23:13:02 *2151.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id: 1 关闭了连接
+[2018-09-04 23:13:11 #2145.0]	NOTICE	Server is shutdown now.
+进程1
+进程2
+[2018-09-04 23:13:35 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:1连接成功,来自于线程3
+[2018-09-04 23:13:37 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：ferf
+主进程
+进程1
+进程2
+[2018-09-04 23:13:44 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id:2连接成功,来自于线程3
+[2018-09-04 23:13:44 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 2 发送的数据：我是发送的数据
+主进程
+进程1
+进程2
+[2018-09-04 23:13:51 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+接收到了客户端id: 1 发送的数据：fsdfa
+主进程
+进程1
+进程2
+[2018-09-05 17:21:19 *2203.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+客户端id: 1 关闭了连接
+[2018-09-05 17:21:29 #2197.0]	NOTICE	Server is shutdown now.
+[2018-09-06 23:02:26 #6326.0]	NOTICE	Server is shutdown now.
+[2018-09-06 23:04:38 #6453.0]	NOTICE	Server is shutdown now.
+[2018-09-06 23:15:09 *6537.1]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:15:09 *6537.1]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:15:09 *6537.1]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:16:45 #6535.0]	NOTICE	Server is shutdown now.
+[2018-09-06 23:27:25 *6600.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:27:25 *6600.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:27:25 *6600.3]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:28:13 *6599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:28:13 *6599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:28:13 *6599.2]	WARNING	sw_coro_create: xdebug do not support coroutine, please notice that it lead to coredump.
+[2018-09-06 23:29:05 #6596.0]	NOTICE	Server is shutdown now.

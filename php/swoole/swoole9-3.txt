@@ -1,0 +1,8 @@
+一.php的cli开发
+php是脚本语言，在zeng engine解析器下，可以直接运行。PHP的cli开发模式就是直接在zend下直接运行php的worker进程。
+操作步骤：
+1.whereis php //查找PHP的引擎(一般把PHP设置为全局的环境)
+2.运行php的文件
+
+
+   

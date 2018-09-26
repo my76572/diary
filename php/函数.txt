@@ -1,0 +1,36 @@
+1.http_build_query拼接url
+$string = http_build_query($array);
+ 例：$data = array("name"=>"callback" , "value"=>"test"); 
+     $rescult = http_build_query($data);
+     name=callback&value=test
+
+2.ksort 案ascll码对键名降序排序 （对数组进行ascll码进行排序）
+  48～57为0到9十个阿拉伯数字，65～90为26个大写英文字母，97～122号为26个小写英文字母
+  ksort 对key进行ascll排序，value与key对应变化
+  asort 键值生序   arsort 键值升序
+
+ 3.
+ imlpode  把数组转化成字符串
+ explode  字符串 -> 数组 
+
+ 4.
+ str_split($str,$len)  //把字符串按规定长度组合成数组 
+ $str = "abbcl";   //  Array ( [0] => a [1] => b [2] => b [3] => c [4] => l )
+
+ array_count_values(str_split($str)); // Array ( [a] => 1 [b] => 2 [c] => 1 [l] => 1 )
+
+ 5.二维数组排序
+ <?php
+    $people_arr = array(
+        array('name'=> '王', 'age' => 40),
+        array('name'=> '胡', 'age' => 20),
+        array('name'=> '刘', 'age' => 35),
+        array('name'=> '任', 'age' => 18)
+    );
+    $age_arr = array();
+    foreach($people_arr as $value){
+        $age_arr[] = $value['age'];
+    }
+    array_multisort($age_arr,SORT_ASC,$people_arr);
+    print_r($people_arr);
+?>
