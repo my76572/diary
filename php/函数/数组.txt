@@ -74,5 +74,11 @@ array_count_values($array); //求数组每个元素出现的个数
 
 
 
+        
+
+
+
+
+
 
 
