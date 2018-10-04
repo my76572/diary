@@ -1,0 +1,74 @@
+1.路由：
+ provider 供应商
+ exclude  排除  
+ verification 验证
+ kernel   核心
+
+ 访问路由：
+ web.php  url/index        post请求测试时注意csrf排除
+ api.php  url/api/index
+
+ where()  //对参数加限制
+ name()   //用于重定向  
+        例：
+        Route::get('test',"TestController@test");
+
+            Route::get("test/userid",function(){
+                echo 12345;
+            })->name("userid");   //用于重定向
+
+            protected function test()
+            {
+                return redirect()->route("userid");
+            }
+  prefix();  //路由前缀
+  group();   //路由分组
+
+  
+
+ 2.日志
+ config/app.php
+
+ 3.中间件
+ php artisan make:controller UserController
+ 4.控制器
+ 常用的方法：
+ index  show  store  update  edit  storage 
+
+ request
+ $request->all()  $request->except()   $request->input()
+ $request->method()  $request->path()  $request->url() $request->fullurl()  $request->has()
+
+ response
+ reponse->view()-<header  response->json($array)
+
+ view 
+ compact 传递多个变量
+ yield 标题  section做边框部分   
+
+
+
+ laravel 状态码：
+ 1.400  dd
+ 2.csrf 419
+ 3.validate验证失败  422
+
+ 表单验证：
+ $this->validate($request,
+  [    'Student.name' => 'required|min:2|max:20|regex: /^[\x{4e00}-\x{9fa5}A-Za-z0-9_]+$/u',   
+       'Student.age' => 'required|integer',
+       'Student.sex' => 'required|integer',
+  ],
+  [    
+           'required' => ':attribute 为必填项',    
+           'min' => ':attribute 长度不能小于2个字符',    
+           'max' => ':attribute 长度不能大于20个字符',    
+           'integer' => ':attribute 必须为数字',
+  ],
+  [    
+      'Student.name' => '用户名',    
+      'Student.age' => '年龄',    
+      'Student.sex' => '性别',
+  ]);
+
+
