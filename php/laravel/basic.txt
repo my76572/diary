@@ -51,7 +51,7 @@
  laravel 状态码：
  1.400  dd
  2.csrf 419
- 3.validate验证失败  422
+ 3.validate验证失败  422  ajax访问直击返回错误
 
  表单验证：
  $this->validate($request,
