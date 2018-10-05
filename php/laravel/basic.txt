@@ -31,6 +31,13 @@
 
  3.中间件
  php artisan make:controller UserController
+ 在控制器中使用中间件
+ $this -> middleware("token")->only('orm');
+ 在路由中使用中间件
+ Route::group(['middleware'=>['token']],function(){
+     Route::post("orm","TestController@orm");
+ });
+
  4.控制器
  常用的方法：
  index  show  store  update  edit  storage 
@@ -38,6 +45,8 @@
  request
  $request->all()  $request->except()   $request->input()
  $request->method()  $request->path()  $request->url() $request->fullurl()  $request->has()
+ $request()->route()->getAction()  控制器获取路径和当前方法
+
 
  response
  reponse->view()-<header  response->json($array)
@@ -72,3 +81,59 @@
   ]);
 
 
+数据填充：
+
+php artisan db:seed  或者 php  artisan  db:seed --class=UsersTableController
+
+for($i = 2;$i<=200;$i++){
+    DB::table('users')->insert([
+        'name' => str_random(10),
+        'email' => str_random(10).'@gmail.com',
+        'password' => bcrypt('secret')
+    ]);
+}
+
+CREATE TABLE `users` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '姓名',
+  `email` varchar(50) NOT NULL COMMENT '邮件',
+  `password` varchar(200) DEFAULT NULL COMMENT '密码',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=203 DEFAULT CHARSET=utf8;
+
+
+查询构造器：
+   查询构造器的特点：
+   一行的话返回值就是一个对象，
+   多行记录的话，就是一个集合(对象)，然后集合包含多个数组，一个数组为一行记录，然后这条记录也是对象。
+
+
+整张表，返回集合   一行           一个值           多个值            一列                块集
+get()            first()      value("email")   select()        pluck("email")      chunk()
+
+聚合函数
+count()  sum()  avg()  min()  max()
+
+去重
+distinct()  //在原生的mysql语句中，distinct放在select后，
+
+联表：
+DB::table('users')
+    ->join('contacts', function ($join) {
+        $join->on('users.id', '=','contacts.user_id')->orOn(...);
+        })
+    ->get();
+
+条件查询：
+where  //多个条件    orwhere   whereBetween  whereIn  whereColumn(验证两个字段是否相等)  whereDate
+$users = DB::table('users')->where([
+    ['status', '=', '1'],
+    ['subscribed', '<>', '1'],
+])->get();    
+
+orderBy  
+latest / oldest
+groupby/having   
+
+foreach可以循环对象和数组:
