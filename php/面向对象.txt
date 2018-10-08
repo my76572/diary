@@ -94,3 +94,11 @@ var_dump($a instanceof MyClass);      //true
 var_dump($a instanceof ParentClass);  //true
 ?>
 
+
+static与self和this的区别：
+static始终会维持调用者内存地址，上面代码中static始终指向$b所代表的的实例对象，在运行的时候就会优先去 本身类的定义域中去寻找存不存在该变量。
+self就很粗暴，不管你是哪个类，它只看被调用的方法或者属性变量定义在哪里，比如定义在父类($ask)，那self就代表父类的地址引用。
+所以static表示维持(维持调用者指针)，self代表本身(定义者)。
+
+self:访问本类和父类中的静态方法和静态属性，常量
+this:本类和父类中的方法和属性
