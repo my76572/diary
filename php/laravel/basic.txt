@@ -137,3 +137,26 @@ latest / oldest
 groupby/having   
 
 foreach可以循环对象和数组:
+
+
+
+$this->model->select($columns)->orderBy($orderField,$orderType)->offset($start)->limit($rows)->get()->toArray();
+make()
+
+
+
+@extends('admin.public')
+@section('style')
+@stop
+@section('ptitle','普通用户管理')
+
+@section('title','普通用户列表')
+
+@section('content')
+@stop
+
+@section('javascript')
+@stop
+
+@section('page_javascript')
+@stop
