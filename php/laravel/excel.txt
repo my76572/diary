@@ -1,1 +1,48 @@
+   1.在csv中，合并单元格不能使用。
+   2.使用ajax下载时，是先使用store保存到服务器，然后再下载。
+   3.ob_end_clean(); // 解决中文乱码问题，放在方法的第一行
+   
+   public function downExcel(){
+        ob_end_clean(); // 解决中文乱码问题
+        $cellData = [
+//            ['a'=>'学号','b'=>'姓名','c'=>'成绩'], // 这里可以不注释 直接写到数据里面去 但是为了单独的设置表头 可以拿出来单独写入
+            ['a'=>'10001','b'=>'AAAAA','c'=>'99'],
+            ['a'=>'10001','b'=>'AAAAA','c'=>'99'],
+            ['a'=>'10001','b'=>'AAAAA','c'=>'99'],
+            ['a'=>'10001','b'=>'AAAAA','c'=>'99'],
+            ['a'=>'10001','b'=>'AAAAA','c'=>'99'],
+        ];
 
+        Excel::create("测试",function($excel) use ($cellData){
+            $excel->sheet('score', function($sheet) use ($cellData){
+//                $sheet->rows($cellData);//默认全部写入数组
+//                $sheet->setWidth(array( 'A' => 12, 'B' => 12, 'C' => 12))->rows($cellData)->setFontSize(12);
+                $sheet->setWidth(array( 'A' => 12, 'B' => 12, 'C' => 12))->setFontSize(12);
+
+                // 第一行是合并单元格
+                $sheet->mergeCells('A1:C1');
+                $sheet->cells('A1', function($cells) {
+                    $cells->setAlignment('center');
+                    $cells->setFontWeight('bold');
+                    $cells->setBackground('#dddddd');
+                });
+                $sheet->cell("A1","三班的成绩");
+
+                // 第二行数据
+                $sheet->cells('A2:C2', function($cells) {
+                    $cells->setAlignment('center');
+                    $cells->setFontWeight('bold');
+                });
+                $sheet->cell("A2","学号");
+                $sheet->cell("B2","姓名");
+                $sheet->cell("C2","成绩");
+
+                // 表格的数据是从第3行开始的的
+                foreach ($cellData as $k=>$val){
+                    $sheet->cell('A'.($k+3),$val['a']);// 写入单个单元格的数据
+                    $sheet->cell('B'.($k+3),$val['b']);
+                    $sheet->cell('C'.($k+3),$val['c']);
+                }
+            });
+        })->export('xls');
+    }
