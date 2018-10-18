@@ -1,1 +1,20 @@
 1. 显示No input file specified，在public下.htaccess下  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]   index.php之后加上 ? 号。
+2.关于在类中调用别的类：
+  1.同一命名空间下：例如Index.php的命名空间也是 namespace app\index\controller，在User.php中调用Index.php
+  <?php
+      namespace app\index\controller;
+      class User{
+          public function index()
+          {
+               $index= new Index();
+               echo $index->index();
+          }
+      }
+  ?>
+  2.不同命名空间下，需要use引入,而后实例化使用
+3.application/route.php
+  Route::get("/user", 'index/User/index');   // User为控制器，index为方法 
+  
+  use think\Route;
+  Route::get("/index", 'index/Index/test');
+  Route::get("/user", 'index/User/index');
