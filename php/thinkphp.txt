@@ -1,1 +1,1 @@
-
+1. 显示No input file specified，在public下.htaccess下  RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]   index.php之后加上 ? 号。
