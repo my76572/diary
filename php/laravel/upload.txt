@@ -130,3 +130,24 @@ class FileController extends Controller
     }
 }
 
+
+
+
+
+
+ if ($request->hasFile('pic_up')) {
+      if ($request->file('pic_up')->isValid()){
+          $date = array();
+          $pic=$request->file('pic_up');
+          $name=$pic->getClientOriginalName();//得到图片名；
+          $ext=$pic->getClientOriginalExtension();//得到图片后缀；
+          $fileName=md5(uniqid($name));
+          $fileName=$fileName.'.'.$ext;//生成新的的文件名
+          $bool=Storage::disk('img')->put($fileName,file_get_contents($pic->getRealPath()));//
+          $date['url']= 'http://wz_admin.com/upload/activitybrief/'.$fileName;//返回文件路径存贮在数据库
+          $date['success'] = true;
+          $date['pic_up'] = true;
+          if($bool){
+              return $date;
+          }
+      }
