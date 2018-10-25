@@ -1,1 +1,57 @@
+laravel的定时任务：
+1.创建执行任务的功能文件：
+  过程： php artisan make:command ChannelUse
+  /**
+     * The name and signature of the console command.
+     */
+    protected $signature = 'command:name';
+
+    /**
+     * The console command description.   定时任务的描述
+     */
+    //protected $description = 'Command description';
+    protected $description = '测试定时任务';
+    
+    /**
+     * Create a new command instance.   不用更改
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
+    {
+        //  定时任务的功能逻辑
+    }
+    
+    
+    2.laravel官方参考文档：  http://laravelacademy.org/post/8484.html
+    
+    /usr/local/php/bin/php /mydata/www/wz_admin/artisan laravel:ChanneluseRepor
+    #* * * * * /usr/local/php/bin/php /mydata/www/wz_admin/artisan schedule:run >> /dev/null 2>&1
+
+
+在kernel.php中进行配置：
+
+ protected $commands = [
+        Test::class,
+        Commands\ChanneluseReport::class,
+    ];
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('laravel:ChanneluseReport')->dailyAt('03:40');  // 渠道用户数据管理。      
+}    
+
+    
+    
+
+
+
+
+
+
 
