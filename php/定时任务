@@ -1,3 +1,5 @@
+https://blog.csdn.net/LJFPHP/article/details/80417552
+
 laravel的定时任务：
 1.创建执行任务的功能文件：
   过程： php artisan make:command ChannelUse
