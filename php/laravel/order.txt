@@ -1,0 +1,2 @@
+1.创建文件
+php artisan make:console 文件名
