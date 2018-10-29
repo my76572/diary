@@ -1,0 +1,66 @@
+https://blog.csdn.net/LJFPHP/article/details/80417552
+
+laravel的定时任务：
+1.创建执行任务的功能文件：
+  过程： php artisan make:command ChannelUse
+  /**
+     * The name and signature of the console command.
+     */
+    protected $signature = 'command:name';
+
+    /**
+     * The console command description.   定时任务的描述
+     */
+    //protected $description = 'Command description';
+    protected $description = '测试定时任务';
+    
+    /**
+     * Create a new command instance.   不用更改
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
+    {
+        //  定时任务的功能逻辑
+    }
+    
+    
+    2.laravel官方参考文档：  http://laravelacademy.org/post/8484.html
+    
+    /usr/local/php/bin/php /mydata/www/wz_admin/artisan laravel:ChanneluseRepor
+    #* * * * * /usr/local/php/bin/php /mydata/www/wz_admin/artisan schedule:run >> /dev/null 2>&1
+    which php. 定位php的运行目录
+
+在kernel.php中进行配置：
+
+ protected $commands = [
+        Test::class,
+        Commands\ChanneluseReport::class,
+    ];
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('laravel:ChanneluseReport')->dailyAt('03:40');  // 渠道用户数据管理。      
+}    
+
+
+////////////////////////
+mac 定时器crontab的设置：
+1.crontab -e 打开设置目录：
+* * * * * /usr/local/php/bin/php /mydata/www/wz_admin/artisan schedule:run >> /dev/null 2>&1
+
+2.crontab -l开始定时任务
+crontab -r  结束定时任务
+
+
+3.关于定时任务的测试：
+/usr/local/php/bin/php /mydata/www/wz_admin/artisan laravel:ChanneluseRepor   //php. artisan 定时任务名称
+
+
+    
+    
