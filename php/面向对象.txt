@@ -102,3 +102,56 @@ self就很粗暴，不管你是哪个类，它只看被调用的方法或者属�
 
 self:访问本类和父类中的静态方法和静态属性，常量
 this:本类和父类中的方法和属性
+
+
+关于self和static的实例：
+class A{
+  public static $ask="hello";  
+
+  public function GetAsk(){
+    echo get_called_class()."<br/>";  
+    echo self::$ask;//hello  
+    echo static::$ask;
+  }
+}  
+
+class B extends A{  
+    public static $ask="nihao";  
+    public function GetNIhao(){
+        echo self::$ask; 
+
+echo static::$ask;
+    }
+} 
+
+$b= new B();
+$b->GetNIhao();  //   都输出 nihao
+
+
+
+例二：
+class A{
+  public static $ask="hello";  
+
+  public function GetAsk(){
+    echo get_called_class()."<br/>";  
+    echo self::$ask;      //hello  
+    echo static::$ask;  //nihao
+  }
+}  
+
+class B extends A{  
+    public static $ask="nihao";  
+    public function GetNIhao(){
+        echo self::$ask; 
+
+echo static::$ask;
+    }
+} 
+
+$b= new B();
+$b->GetAsk();  //这个时候，static输出“nihao”，self输出“hello”。
+
+在面向对象，继承时，static会优先选择子类，self则永远是类本身。
+
+
