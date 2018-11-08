@@ -1,0 +1,23 @@
+本文章记录的是从一个get路由开始，laravel的工作流程。
+1.自动加载文件的引入 autoload.php
+2.实例化application 
+   2-1: application的构造函数判断是否存在绝对路径根目录，并把根目录设置为应用程序的基本路径
+   2-2: $this->registerBaseBindings();  //将基本绑定 注册到容器中
+       2-2-1:  static::setInstance($this);  //设置容器的共享实例
+              2-2-1-1:在container.php中，8把 $this放置到  现在全局可用变量 
+       2-2-2:  $this->instance('app', $this);   
+       //Register an existing instance as shared in the container.  
+         a.把对象放到容器中作为共享
+         a-1: $this->removeAbstractAlias($abstract);  //
+
+
+
+
+
+
+
+container.php 容器类
+1. 属性：
+   $aliases   // 别名  array         The registered type aliases
+   $bindings  //      array         The container's bindings
+   $instances //      array         The container's shared instances

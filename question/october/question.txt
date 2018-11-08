@@ -1,0 +1,6 @@
+1.laravel的路由底层:逻辑文件：app/Providers/RouteServiceProvider
+
+2.中间件组的含义
+
+3.csrf:
+  laravel的csrf攻击返回状态码是419  ，需要在app/Http/Middleware/VerifyCsrfToken中排除路由

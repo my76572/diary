@@ -1,0 +1,8 @@
+1.composer init  初始化
+
+
+2.composer install   
+  composer install安装时，会先检查composer.lock中是否有该包的版本，有则下载composer.lock中的版本
+  composer.lock保证项目协同开发，下载的包版本一致
+
+  composer update  //更新vender包  且update会更新composer.lock

@@ -1,0 +1,29 @@
+1.属性绑定：
+v-bind:name="name" v-bind:id=""     ：
+v-on：click = "方法名"                @
+v-once： 一次性的插值
+v-html： 不会被vue解析
+{{ 进行数值运算 }}  但一般 {{ data 或者 method }}
+
+
+2.条件
+  <p v-if="seen">现在你看到我了</p>
+
+3.循环
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+     </ol>  
+
+todos: [
+        { text: '学习 JavaScript' },
+        { text: '学习 Vue' },
+        { text: '整个牛项目' }
+       ]      
+
+4.vue的生命钩子的函数this指向vue实例。     
+  data :  
+  methods : 响应式依赖方法，即加载vue，就会更新    用来监听事件
+  computed : 计算属性，若所求值没有改变，则直接返回缓存。  method则会重新计算后返回
+  watch : 侦听属性，  

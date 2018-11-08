@@ -1,0 +1,13 @@
+知识点：
+1.mixed  不确定的数据类型
+2.类名::calss   <=>  "命名空间\类名"
+
+static  self的区别
+
+3.get_class 返回对象的类名
+
+bootstrap/app.php
+1.引入Application.php
+application 是一个全局的对象
+application包含的属性有：
+  instances：项目下的基本路由   
