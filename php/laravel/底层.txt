@@ -6,6 +6,4 @@ ioc就是不在类里面实例化类，而是解耦，把对象当作参数传�
 容器提供实例或者实例的回调函数
 
 $var instanceof  Closure   //某个变量是否是回调函数
-dsacrefvcasd
-王跃东dsvafadsvcd
-123456dcascer
+
