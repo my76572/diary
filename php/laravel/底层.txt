@@ -7,4 +7,4 @@ ioc就是不在类里面实例化类，而是解耦，把对象当作参数传�
 
 $var instanceof  Closure   //某个变量是否是回调函数
 
-wannyuedong
+王跃东
