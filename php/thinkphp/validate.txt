@@ -1,0 +1,53 @@
+
+在application/index下创建validata目录
+<?php
+
+namespace app\index\validate;
+
+use think\Validate;
+
+class ApprenticeValidate extends Validate
+{
+    protected $rule = [
+        'uid'   => 'require',
+        'os'   => 'require',
+        'fid'   => 'require',
+    ];
+
+    protected $message = [
+        'uid.require'           => '100101',
+        'os.require'            => '100102',
+        'fid.require'            => '100104',
+    ];
+
+    protected $scene = [
+        'index'         => ['uid','os','fid'],
+    ];
+}
+
+
+
+ try {
+    $validate = validate('ArtValidate');
+    //验证传递过来的各项参数
+    if (!$validate->scene('allApp')->check($this->_data)) {
+        $message = $validate->getError();
+        //抛出异常
+        throw new \Exception($message, $message);
+    } else {
+        //执行主函数
+        $return = $this->getAllApp();
+    }
+
+} catch (\Exception $e) {
+
+    $result = [
+        'err_code'   => $e->getCode(),
+        'return_msg' => $e->getMessage(),
+        'data'       => array(),
+    ];
+//            $return = $this->returnResultAES($result);
+    $return = $this->returnResult($result);
+
+}
+return json($return);

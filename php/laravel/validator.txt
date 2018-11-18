@@ -1,0 +1,138 @@
+php artisan make:request 表单请求名称
+
+<?php
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+class AnjieContacts extends Model
+{
+    protected $table = 'anjie_work_contacts';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
+    //数据表字段type映射
+    protected $type = [
+        0 => '其它',
+        1 => '父子',
+        2 => '母子',
+        3 => '父女',
+        4 => '母女',
+        5 => '兄弟姐妹',
+        6 => '亲属',
+        7 => '同学',
+        8 => '朋友',
+        9 => '同事',
+        10 => '同乡'
+    ];
+    // 数据验证
+    protected $role = [
+        'name'          => 'required|min:1|max:100',  //必填 字符串
+        'type'          => 'required|integer|between:0,10', //必填 数字 最大10
+        'mobile'        => 'required|regex:/^1[34578][0-9]{9}$/', //必填 string 手机号格式
+        'idcard'        => 'required|regex:/^[1-9]\d{14}(\d{2}[0-9x])?$/', //必填 string 手机号格式
+        'work_id'       => 'required|integer', //必填 整数
+    ];
+    // 提示信息
+    protected $msgs = [
+        'required'          => ':attribute不能为空',
+        'min'               => ':attribute最少:min字符',
+        'max'               => ':attribute最多:max字符',
+        'between'           => ':attribute必须在:min到:max之间',
+        'integer'           => ':attribute必须为整型数字',
+        'mobile.regex'     => ':attribute必须为手机号格式',
+        'idcard.regex'     => ':attribute必须为身份证格式',
+    ];
+    // 自定义字段名称
+    protected $custom = [
+        'name'       => '联系人',
+        'type'       => '关系',
+        'idcard'     => '身份证号码',
+        'moblie'     => '手机号码',
+        'work_id'    => '工作流ID',
+    ];
+
+  /**
+     * 获取联系人信息
+     * @param int $work_id
+     * @param string $fields
+     * @return array
+     */
+    public function getContactsInfo($work_id = -1, $fields = '*')
+    {
+        $info = self::select($fields)
+            ->where('work_id', '=', $work_id)
+            ->where('del', '=',0)
+            ->orderBy('sort','asc')
+            ->limit(5)
+            ->get()
+            ->toArray();
+
+        foreach($info as $k=>$v){
+            $info[$k]['type_name'] = $this->type[$v['type']];
+        }
+        return $info ? $info : [];
+    }
+
+    /**
+     * 设置联系人信息
+     * @param array $data
+     * @return bool
+     * @throws \Exception
+     */
+    public function setContactsInfo($data = [])
+    {
+        if(count($data['contacts']) > 5){
+            throw new \Exception('最多只能添加5位联系人', -1);
+        }
+        $time = time();
+        DB::beginTransaction();//事务开启
+        foreach($data['contacts'] as $k=>$v){
+            $v['work_id'] = $data['work_id'];
+            $v['idcard'] = $data['idcard'];
+            // 验证器
+            $validator = \Validator::make($v,$this->role,$this->msgs,$this->custom);
+            if($validator->fails()){//验证字段失败
+                throw new \Exception($validator->errors()->first(), -1);
+            }
+            $v['sort']  = $k+1;
+            $v['del'] = 0;
+            $v['id'] = !empty($v['id']) ? (int)$v['id'] : null;
+            if(!empty($v['id'])){//修改
+                $v['modify_time'] = $time;
+                $edit_result[] = self::where(['id'=>$v['id']])->update($v);#更新操作
+            }else{//添加
+                $v['id'] = null;
+                $v['create_time'] = $time;
+                $add_data[] = $v;
+            }
+
+        }
+
+
+        $insert = empty($add_data)? 1 : self::insert($add_data);#添加结果
+        $update = empty($edit_result) ? 1:(in_array(0,$edit_result) ? 0 : 1);#修改结果
+        if($update && $insert){
+            DB::commit();//事务提交
+            return true;
+        }else{
+            DB::rollback();//事务回滚
+            throw new \Exception('操作失败！', -1);
+        }
+    }
+    /**
+     * 删除联系人信息
+     * @param integer $id 联系人ID
+     * @return bool
+     */
+    public function delContactsInfo($id =0)
+    {
+        if(self::where(['id'=>$id])->update(['del'=>1])){
+            return  true;
+        }else{
+            throw new \Exception('操作失败！', -1);
+        }
+    }
+
+
+}

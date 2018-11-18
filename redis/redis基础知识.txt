@@ -1,3 +1,5 @@
+http://www.redis.net.cn/order/
+
 启动reids的服务器与客户端
   6379
   find / -name redis-server   ./redis-server
@@ -58,6 +60,21 @@ hash：类似于数据表
 存增删改查： hexists  hset/hmset  hget/hmget  hgetall
 字段名 hkeys hlen(字段数量)  字段数量 hvals
 自增    hincrby
+
+
+ /**
+  * 统计收徒类型点击次数
+  *  @param $sharewechat 点击分享的类型
+  *  @param $times 次数
+  */
+public function setApprenticeShareClick($sharewechat,$times){
+    $key = "key_name".date("Y-m-d");
+    if($this->_redis->handler()->hget($key,$sharewechat)){
+        $this->_redis->handler()->hincrbyfloat($key,$sharewechat,$times);
+    }else{
+        $this->_redis->handler()->hset($key,$sharewechat,$times);
+    }
+}
 
 ==============
 lists  消息队列
