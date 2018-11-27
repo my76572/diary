@@ -101,3 +101,5 @@ PRIMARY KEY (id),
 KEY idx_role_id (role_id) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’角色权限表’;
 
+=========================================================
+
