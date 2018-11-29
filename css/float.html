@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .top, .banner, .main, .footer{
+            width:960px;
+            margin:0 auto;
+            text-align: center;
+            margin-bottom:10px;
+            border:1px solid #cccccc;
+            
+        }
+        .top{
+            height:50px;
+            background-color: aliceblue;
+        }
+        .banner{
+            height:50px;
+            background-color: aliceblue;
+        }
+        .main{
+            border:1px solid white;
+            height:100px;
+        }
+        .left{
+            height: 100px; 
+            background-color: brown;
+            float:left;
+            width:300px;
+            margin-right:8px;
+        }
+        .right{
+            height: 100px; 
+            background-color: rgb(132, 165, 42);
+            float:left;
+            width:652px;
+        }
+        .footer{
+            height:50px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="top">top</div>
+    <div class="banner">banner </div>
+    <div class="main">
+        <div class="left">left </div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+
+</body>
+</html>

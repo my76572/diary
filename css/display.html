@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 100px;
+            /*display:none;  不占用标准流*/
+            /* visibility: hidden; 占用标准流 */
+        }
+
+        div img{
+            display: none;
+        }
+        div:hover img{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        扫描二维码
+        <img src="./qcode.jpeg" alt="二维码">
+    </div>
+    
+</body>
+</html>

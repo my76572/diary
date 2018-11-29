@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子</title>
+    <style>
+    /*
+    *  padding： 手机与手机盒
+    *  border：  手机盒的宽度
+    *  margin：  手机盒之外距离
+    */ 
+    *{
+        margin : 0;
+        padding: 0;
+    }
+
+    div {
+        height: 200px;   /*宽和高定义的时内容的宽和高*/
+        width: 200px;
+        border: 1px red  solid;
+        padding: 5px;  /*padding-left padding-top  padding-right padding-bottom*/
+        border-radius: 10px;
+    }
+    nav {
+        height: 42px;
+        background-color: darkgray;
+        border-top: 3px solid #ff8500;
+        border-bottom: 1px solid #EDEEF0; 
+    }
+    nav a {
+        font-size: 14px;
+        color:#4c4c4c;
+        text-decoration: none;
+        height: 35px; 
+        line-height: 41px;  /*行高等于盒子高度，则上下居中 */
+        padding: 0px 20px;
+        display: inline-block; 
+    }
+    nav a:hover{
+        /* color: #ff8500; */
+
+        background-color: #ff8500
+    }
+    /* img {
+        背景图片和大小
+        background: #ffffff url(image.jpg) 0 //水平位置 0垂直位置 no-repeat;
+        background-size: 100px 110px; 
+    } */
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">网站首页</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">网站导航</a>
+        <a href="#">其他</a>
+    </nav>
+
+    <hr>
+    
+</body>
+</html>

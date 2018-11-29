@@ -1,0 +1,46 @@
+盒子：
+1.  行内元素设置width,height属性无效，
+    行内元素的水平方向的padding-left,padding-right,margin-left,margin- right都产生边距效果, 
+    竖直方向的padding-top,padding-bottom,margin-top,margin-bottom 却不会产生预期的边距效果.  无效
+
+    两个竖直的div会出现margin-bottom和bottom-top合并的现象。
+
+    <div>
+      <div>we</div>   {overflow:hidden}  //解决父子盒子的外边距塌陷问题
+    </div>
+
+2.display： block  inline   inline-block(有height属性，且不会独占一行)
+3.字体垂直居中： height：40px; line-height:40px;   //行高和高度相等
+  字体水平居中： text-algin：center；
+4.字体水平居中： padding-left 和 padding-right 相等
+  字体常设置的样式： 大小  位置   颜色
+
+5 padding 设置盒子里 内容的位子    margin:设置盒子的位置
+
+6.当 margin-left 和 margin-right 设置为auto时，可以实现居中对齐。
+
+浮动：让多个快元素在同一行
+1. 标准流在下，浮动在上
+2.一个父盒子里，一个子盒子浮动，那么所有的子盒子都浮动，才能在一行里
+特别注意：要和标准流的父盒子配合使用
+
+.top+.banner+.main+.footer  //快速生成div盒子，且class属性为top  banner  main  footer 
+.top+.banner+(.main>.left+.right)+.footer
+
+版心：960px   980px   1000px  1200px
+
+
+定位： 定位模式 + 边偏移
+      position：static relative相对   absolute绝对  fixed固定
+      top  right botton left
+
+static：就是标准流
+relative：相对标准流的定位，且仍然占有标准流的位置
+absolute：相对于父标签的定位
+
+display: none   block  inline  inline-block
+visibility: hidden;   visible
+overflow: visible auto(滚动条)  hidden(溢出隐藏)  scroll(一直显示滚动条)  
+
+
+
